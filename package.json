@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
-    "dev": "nodemon -r ts-node/register src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [
     "express",
@@ -20,8 +20,6 @@
   "license": "ISC",
   "description": "Journaling app",
   "dependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.10.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -31,6 +29,9 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
     "@typescript-eslint/parser": "^8.18.2"
   }
